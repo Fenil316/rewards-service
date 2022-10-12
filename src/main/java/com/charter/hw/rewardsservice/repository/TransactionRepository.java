@@ -11,11 +11,7 @@ import java.util.List;
 
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
-
-    // TODO: test this
-    List<Transaction> findAllByTransactionDateBetween(LocalDateTime fromDate, LocalDateTime toDate);
-
-    @Query("select t from Transaction t where t.transactionDate >= :fromDate and t.transactionDate <= :toDate")
+    @Query("select t from Transaction t where t.transactionDate >= :fromDate and t.transactionDate <= :toDate order by t.transactionDate")
     List<Transaction> findAllByTransactionDateBetweenDates(@Param("fromDate") LocalDateTime fromDate,
                                                            @Param("toDate") LocalDateTime toDate);
 }
