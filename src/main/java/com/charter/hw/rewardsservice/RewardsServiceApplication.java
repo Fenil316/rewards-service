@@ -9,6 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -23,6 +24,7 @@ public class RewardsServiceApplication {
 	}
 
 	@Bean
+	@Profile("!prod")
 	public CommandLineRunner loadData(CustomerRepository repository, TransactionRepository transactionRepository) {
 		return (args) -> {
 			// save a few customers
@@ -52,7 +54,6 @@ public class RewardsServiceApplication {
 			for (Customer customer : customers) {
 				log.info(customer.toString());
 			}
-			log.info("");
 		};
 	}
 

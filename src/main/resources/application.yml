@@ -16,3 +16,18 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+server:
+  port: 8000
+
+api:
+  title: Charter Rewards Service
+  description: Provides total points earned by a customer within a given date range
+  terms-url: https://www.spectrum.com/policies/terms-of-service
+  license:
+    name: Charter License
+    url: https://www.spectrum.com
+  version: 1.0.0

@@ -44,8 +44,10 @@ public class RewardsService {
     }
 
     private void validateDates(LocalDate fromDate, LocalDate toDate) {
-        if(fromDate.isAfter(toDate))
+        if(fromDate.isAfter(toDate)) {
+            log.warn("Inappropriate dates passed");
             throw new BusinessException("fromDate cannot be after toDate");
+        }
     }
 
     private RewardsResponse transformTransactionsToPoints(Map<String, List<Transaction>> groupedByCustomers) {
