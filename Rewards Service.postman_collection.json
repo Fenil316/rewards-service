@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "215a1e65-70e7-4e6e-8847-d125223d5e39",
+		"name": "Rewards Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Rewards service - inclusive dates",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://localhost:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS GET Rewards service - inclusive dates",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://ec2-3-142-69-77.us-east-2.compute.amazonaws.com:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Rewards service - 10 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(10, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://localhost:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS GET Rewards service - 10 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(10, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://ec2-3-142-69-77.us-east-2.compute.amazonaws.com:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Rewards service - 24 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(24, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://localhost:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS GET Rewards service - 24 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(24, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://ec2-3-142-69-77.us-east-2.compute.amazonaws.com:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Rewards service - 60 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(60, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://localhost:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS GET Rewards service - 60 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(60, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://ec2-3-142-69-77.us-east-2.compute.amazonaws.com:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Rewards service - 90 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(90, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://localhost:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS GET Rewards service - 90 day window",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');",
+							"",
+							"pm.environment.set('fromDate', moment().subtract(90, \"days\").format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('toDate', moment().format((\"YYYY-MM-DD\")));",
+							"pm.environment.set('domain', \"http://ec2-3-142-69-77.us-east-2.compute.amazonaws.com:8000\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rewards-service/rewards?fromDate={{fromDate}}&toDate={{toDate}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rewards-service",
+						"rewards"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "{{fromDate}}"
+						},
+						{
+							"key": "toDate",
+							"value": "{{toDate}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
