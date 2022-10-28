@@ -8,11 +8,11 @@
 		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.charter.hw</groupId>
+	<groupId>com.demo.hw</groupId>
 	<artifactId>rewards-service</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>rewards-service</name>
-	<description>Charter Communications API Homework</description>
+	<description>Demo API Homework</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -53,6 +53,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>rewards-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

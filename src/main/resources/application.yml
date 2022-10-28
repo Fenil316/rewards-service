@@ -24,10 +24,10 @@ server:
   port: 8000
 
 api:
-  title: Charter Rewards Service
+  title: Demo Rewards Service
   description: Provides total points earned by a customer within a given date range
   terms-url: https://www.spectrum.com/policies/terms-of-service
   license:
-    name: Charter License
+    name: Demo License
     url: https://www.spectrum.com
   version: 1.0.0
